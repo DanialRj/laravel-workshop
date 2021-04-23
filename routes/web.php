@@ -32,6 +32,7 @@ Route::group(['middleware' => 'auth'], function() {
         Route::put('/{id}/edit', 'GoodController@update')->name('.update');
         Route::get('/trash', 'GoodController@trash')->name('.trash');
         Route::post('/delete', 'GoodController@delete')->name('.delete');
+        Route::post('/delete/restore', 'GoodController@restore')->name('.restore');
         Route::delete('/delete', 'GoodController@destroy')->name('.destroy');
     });
 

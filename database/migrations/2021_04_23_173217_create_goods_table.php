@@ -16,10 +16,10 @@ class CreateGoodsTable extends Migration
         Schema::create('goods', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('name');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->string('slug');
-            $table->integer('stock');
-            $table->integer('image');
+            $table->integer('stock')->nullable();
+            $table->string('image')->nullable();
             $table->uuid('category_id')->nullable();
             $table->uuid('owner_user_id')->nullable();
             $table->timestamps();
